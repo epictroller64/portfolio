@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -12,15 +11,22 @@ export default function Home() {
 
 const Uppersection = () => (
   <section className="bg-black w-full flex h-[50vh]">
-    <svg className="absolute w-full h-full">
-      <WhiteLine direction="left"></WhiteLine>
-      <WhiteLine direction="top"></WhiteLine>
-    </svg>
     <div className="m-auto">
-      <p className="text-7xl text-center text-white">Welcome to my Portfolio</p>
+      <div className="flex flex-col gap-4 relative">
+        <Title></Title>
+        <div className="flex flex-row m-auto">
+          <p className="text-4xl text-center text-white">Full Stack Developer</p>
+        </div>
+      </div>
     </div>
   </section>
 );
+
+const Title = () => (
+  <div className="relative">
+    <p className="text-7xl text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 animate-gradient bg-[length:200%_auto] hover:animate-none">Welcome to my Portfolio</p>
+  </div>
+)
 
 function getLineCoordinates(direction: "left" | "right" | "top" | "bottom") {
   switch (direction) {
@@ -41,7 +47,7 @@ function getLineCoordinates(direction: "left" | "right" | "top" | "bottom") {
   }
 }
 
-function renderRandomLines() {}
+function renderRandomLines() { }
 
 const WhiteLine = ({
   direction,
@@ -63,7 +69,7 @@ const WhiteLine = ({
       }
       requestAnimationFrame(animate);
     }
-    requestAnimationFrame(animate);
+    //requestAnimationFrame(animate);
   }, []);
   return (
     <line

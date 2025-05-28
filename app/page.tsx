@@ -1,30 +1,63 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { ProjectsShowcase } from "./components/ProjectsShowcase";
+import { TechStack } from "./components/TechStack";
+import AboutMe from "./components/AboutMe";
 
 export default function Home() {
   return (
     <main>
       <Uppersection></Uppersection>
+      <MiddleSection></MiddleSection>
     </main>
   );
 }
 
 const Uppersection = () => (
-  <section className="bg-black w-full flex h-[50vh]">
+  <section className="bg-foreground w-full flex h-[50vh]">
     <div className="m-auto">
-      <div className="flex flex-col gap-4 relative">
+      <div className="flex flex-col gap-8 relative">
         <Title></Title>
-        <div className="flex flex-row m-auto">
-          <p className="text-4xl text-center text-white">Full Stack Developer</p>
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-4xl text-center text-white font-medium">Full Stack Developer</p>
+          <div className="flex items-center gap-2 text-2xl text-gray-300">
+            <span>from</span>
+            <span className="flex items-center gap-2">
+              Estonia
+              <div className="relative w-6 h-4">
+                <Image
+                  src="/estonia-flag.svg"
+                  alt="Estonian Flag"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 );
 
+const MiddleSection = () => (
+  <section className="bg-background w-full flex min-h-[50vh] p-8 flex-col gap-8">
+    <AboutMe></AboutMe>
+    <div className="flex flex-col gap-8">
+      <h2 className="text-4xl text-center text-foreground font-medium">My Projects</h2>
+      <ProjectsShowcase></ProjectsShowcase>
+    </div>
+    <div className="flex flex-col gap-8">
+      <h2 className="text-4xl text-center text-foreground font-medium">Tech Stack</h2>
+      <TechStack></TechStack>
+    </div>
+  </section>
+)
+
 const Title = () => (
   <div className="relative">
-    <p className="text-7xl text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 animate-gradient bg-[length:200%_auto] hover:animate-none">Welcome to my Portfolio</p>
+    <p className="text-7xl h-24 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 animate-gradient bg-[length:200%_auto] hover:animate-none">Welcome to my Portfolio</p>
   </div>
 )
 

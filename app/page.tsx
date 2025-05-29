@@ -41,17 +41,12 @@ const Uppersection = () => (
   </section>
 );
 
+
 const MiddleSection = () => (
   <section className="bg-background w-full flex min-h-[50vh] p-8 flex-col gap-8">
     <AboutMe></AboutMe>
-    <div className="flex flex-col gap-8">
-      <h2 className="text-4xl text-center text-foreground font-medium">My Projects</h2>
-      <ProjectsShowcase></ProjectsShowcase>
-    </div>
-    <div className="flex flex-col gap-8">
-      <h2 className="text-4xl text-center text-foreground font-medium">Tech Stack</h2>
-      <TechStack></TechStack>
-    </div>
+    <ProjectsShowcase></ProjectsShowcase>
+    <TechStack></TechStack>
   </section>
 )
 

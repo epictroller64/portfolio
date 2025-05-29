@@ -98,50 +98,53 @@ const projects: Project[] = [
 
 export const ProjectsShowcase = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto">
-            {projects.map((project, index) => (
-                <div
-                    key={index}
-                    className="bg-black text-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                >
-                    <div className="p-6">
-                        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                        <p className="text-gray-400 mb-4">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            {project.tech.map((tech) => (
-                                <div
-                                    key={tech}
-                                    className="flex items-center gap-1 px-2 py-1 bg-gray-800 rounded-md"
-                                    style={{ color: techIcons[tech].color }}
-                                >
-                                    {techIcons[tech].icon}
-                                    <span className="text-xs font-medium capitalize">{tech}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex gap-4">
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-600 hover:text-blue-800 font-medium"
-                            >
-                                View Project →
-                            </a>
-                            {project.github && (
+        <div className="w-full max-w-4xl mx-auto">
+            <h2 className="text-4xl text-start text-foreground font-medium mb-8">My Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        className="bg-black text-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div className="p-6">
+                            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                            <p className="text-gray-400 mb-4">{project.description}</p>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {project.tech.map((tech) => (
+                                    <div
+                                        key={tech}
+                                        className="flex items-center gap-1 px-2 py-1 bg-gray-800 rounded-md"
+                                        style={{ color: techIcons[tech].color }}
+                                    >
+                                        {techIcons[tech].icon}
+                                        <span className="text-xs font-medium capitalize">{tech}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex gap-4">
                                 <a
-                                    href={project.github}
+                                    href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-gray-200 font-medium"
+                                    className="text-blue-600 hover:text-blue-800 font-medium"
                                 >
-                                    GitHub →
+                                    View Project →
                                 </a>
-                            )}
+                                {project.github && (
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-gray-400 hover:text-gray-200 font-medium"
+                                    >
+                                        GitHub →
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     );
 };

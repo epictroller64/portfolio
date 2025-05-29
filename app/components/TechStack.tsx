@@ -33,18 +33,21 @@ const techStack: TechItem[] = [
 export const TechStack = () => {
     return (
         <div className="w-full max-w-4xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                {techStack.map((tech, index) => (
-                    <div
-                        key={index}
-                        className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                        <div className="text-3xl" style={{ color: tech.color }}>
-                            {tech.icon}
+            <h2 className="text-4xl text-start text-foreground font-medium mb-8">Tech Stack</h2>
+            <div className="w-full">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    {techStack.map((tech, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                        >
+                            <div className="text-3xl" style={{ color: tech.color }}>
+                                {tech.icon}
+                            </div>
+                            <span className="text-sm font-medium text-gray-700">{tech.name}</span>
                         </div>
-                        <span className="text-sm font-medium text-gray-700">{tech.name}</span>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -66,25 +66,28 @@ const projects: Project[] = [
     {
         title: "Currency Converter App",
         description: "Currency converter app with 3rd party API integration.",
-        link: "https://github.com/yourusername/currency-converter",
+        link: "https://github.com/epictroller64/currency-exchange-app",
+        github: "https://github.com/epictroller64/currency-exchange-app",
         tech: ["swift", "apple", "xcode"]
     },
     {
         title: "Loan comparsion website/blog",
         description: "A website/blog that compares loans from different banks. For affiliate marketing.",
-        link: "https://github.com/yourusername/loan-comparison",
+        link: "https://www.soodsamlaen.ee/",
         tech: ["typescript", "react", "nextjs", "tailwind"]
     },
     {
         title: "iTurg - Scraping and price comparion website",
         description: "Scrape on sale Apple products from local estonian markeplaces. Stores historic prices. Website tries to resemble Apple's design.",
-        link: "https://github.com/yourusername/iturg",
+        link: "https://iturg.ee/",
+        github: "https://github.com/epictroller64/iturg-app",
         tech: ["typescript", "react", "nextjs", "tailwind", "python", "fastapi"]
     },
     {
         title: "Simple time tracking app for daily activity",
         description: "Track your time spent on activities. View statistics and see exactly where you spend your time.",
         link: "https://time-tracker-gamma-three.vercel.app/",
+        github: "https://github.com/epictroller64/time-tracker",
         tech: ["typescript", "react", "nextjs", "tailwind"]
     },
 ];

@@ -19,7 +19,6 @@ import {
     SiPython,
     SiFastapi
 } from 'react-icons/si';
-import { useState } from 'react';
 
 interface TechIcon {
     icon: React.ReactNode;
@@ -51,8 +50,8 @@ const techIcons: Record<string, TechIcon> = {
 interface Project {
     title: string;
     description: string;
-    image: string;
     link: string;
+    github?: string;
     tech: string[];
 }
 
@@ -60,35 +59,31 @@ const projects: Project[] = [
     {
         title: "Company Statistics",
         description: "Shows Estonian company statistics including ownership, employees, revenue, and more. Data is fetched from multiple public datasets, such as OpenSanctions and Statistikaamet.",
-        image: "/company-statistics.png",
-        link: "https://github.com/yourusername/company-statistics",
+        link: "https://ee-stats-frontend.vercel.app/",
+        github: "https://github.com/epictroller64/ee-stats-frontend",
         tech: ["typescript", "react", "postgresql", "springboot"]
     },
     {
         title: "Currency Converter App",
         description: "Currency converter app with 3rd party API integration.",
-        image: "/currency-converter.png",
         link: "https://github.com/yourusername/currency-converter",
         tech: ["swift", "apple", "xcode"]
     },
     {
         title: "Loan comparsion website/blog",
         description: "A website/blog that compares loans from different banks. For affiliate marketing.",
-        image: "/loan-comparison.png",
         link: "https://github.com/yourusername/loan-comparison",
         tech: ["typescript", "react", "nextjs", "tailwind"]
     },
     {
         title: "iTurg - Scraping and price comparion website",
         description: "Scrape on sale Apple products from local estonian markeplaces. Stores historic prices. Website tries to resemble Apple's design.",
-        image: "/iturg.png",
         link: "https://github.com/yourusername/iturg",
         tech: ["typescript", "react", "nextjs", "tailwind", "python", "fastapi"]
     },
     {
         title: "Simple time tracking app for daily activity",
         description: "Track your time spent on activities. View statistics and see exactly where you spend your time.",
-        image: "/time-tracker.png",
         link: "https://time-tracker-gamma-three.vercel.app/",
         tech: ["typescript", "react", "nextjs", "tailwind"]
     },
@@ -96,29 +91,7 @@ const projects: Project[] = [
 
 
 
-const ProjectImage = ({ src, alt }: { src: string; alt: string }) => {
-    const [imageError, setImageError] = useState(false);
-    const [imageLoaded, setImageLoaded] = useState(false);
 
-    return (
-        <div className="relative h-48 w-full bg-black">
-            {!imageLoaded && !imageError && (
-                null
-            )}
-            {imageError && (
-                null
-            )}
-            <img
-                src={src}
-                alt={alt}
-                className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'
-                    }`}
-                onLoad={() => setImageLoaded(true)}
-                onError={() => setImageError(true)}
-            />
-        </div>
-    );
-};
 
 export const ProjectsShowcase = () => {
     return (
@@ -128,7 +101,6 @@ export const ProjectsShowcase = () => {
                     key={index}
                     className="bg-black text-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                    <ProjectImage src={project.image} alt={project.title} />
                     <div className="p-6">
                         <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                         <p className="text-gray-400 mb-4">{project.description}</p>
@@ -144,14 +116,26 @@ export const ProjectsShowcase = () => {
                                 </div>
                             ))}
                         </div>
-                        <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:text-blue-800 font-medium"
-                        >
-                            View Project →
-                        </a>
+                        <div className="flex gap-4">
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:text-blue-800 font-medium"
+                            >
+                                View Project →
+                            </a>
+                            {project.github && (
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-400 hover:text-gray-200 font-medium"
+                                >
+                                    GitHub →
+                                </a>
+                            )}
+                        </div>
                     </div>
                 </div>
             ))}

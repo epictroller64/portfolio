@@ -90,6 +90,19 @@ const projects: Project[] = [
         github: "https://github.com/epictroller64/time-tracker",
         tech: ["typescript", "react", "nextjs", "tailwind"]
     },
+    {
+        title: "Price tracker for Ebay",
+        description: "Track prices and stock levels for given ebay products. Get notified on Telegram when your conditions are met. Useful for ebay sellers, for example tracking your competitor prices.",
+        link: "https://ebay.ohh.ee/",
+        github: "https://github.com/epictroller64/Ebay-pricechecker-backend",
+        tech: ["typescript", "react", "nextjs", "tailwind", "python", "fastapi"]
+    },
+    {
+        title: "Vipkasiinoboonused",
+        description: "Affiliate marketing website for online casinos in estonia.",
+        link: "https://www.vipkasiinoboonused.ee/",
+        tech: ["typescript", "react", "nextjs", "tailwind"]
+    }
 ];
 
 

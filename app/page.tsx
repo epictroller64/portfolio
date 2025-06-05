@@ -27,19 +27,19 @@ const Uppersection = () => (
       <div className="absolute w-2 h-2 bg-white/20 rounded-full animate-float-6"></div>
     </div>
 
-    <div className="relative z-10 px-6 w-full max-w-6xl mx-auto py-20">
-      <div className="flex flex-col gap-16">
-        <div className="flex flex-col gap-8">
+    <div className="relative z-10 px-4 sm:px-6 w-full max-w-6xl mx-auto py-12 sm:py-20">
+      <div className="flex flex-col gap-8 sm:gap-16">
+        <div className="flex flex-col gap-6 sm:gap-8">
           <Title></Title>
-          <div className="flex flex-col items-center gap-4">
-            <h2 className="text-6xl text-center text-white font-semibold tracking-tight bg-clip-text">
+          <div className="flex flex-col items-center gap-3 sm:gap-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl text-center text-white font-semibold tracking-tight bg-clip-text">
               Full Stack Developer
             </h2>
-            <div className="flex items-center gap-3 text-2xl text-gray-200">
+            <div className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl text-gray-200">
               <span>based in</span>
               <span className="flex items-center gap-2 group">
                 Estonia
-                <div className="relative w-7 h-5 transition-transform group-hover:scale-110">
+                <div className="relative w-6 h-4 sm:w-7 sm:h-5 transition-transform group-hover:scale-110">
                   <Image
                     src="/estonia-flag.svg"
                     alt="Estonian Flag"
@@ -52,22 +52,22 @@ const Uppersection = () => (
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-10">
-          <div className="flex gap-8">
-            <a href="#about-me" className="group relative px-10 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-all duration-300 overflow-hidden text-lg font-medium">
+        <div className="flex flex-col items-center gap-6 sm:gap-10">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 w-full sm:w-auto">
+            <a href="#about-me" className="group relative px-6 sm:px-10 py-3 sm:py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-all duration-300 overflow-hidden text-base sm:text-lg font-medium text-center">
               <span className="relative z-10">About Me</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
             <a
               href="#projects"
-              className="group relative px-10 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-all duration-300 overflow-hidden text-lg font-medium"
+              className="group relative px-6 sm:px-10 py-3 sm:py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-all duration-300 overflow-hidden text-base sm:text-lg font-medium text-center"
             >
               <span className="relative z-10">View Projects</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
             <a
               href="#tech-stack"
-              className="group relative px-10 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-all duration-300 overflow-hidden text-lg font-medium"
+              className="group relative px-6 sm:px-10 py-3 sm:py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-all duration-300 overflow-hidden text-base sm:text-lg font-medium text-center"
             >
               <span className="relative z-10">Tech Stack</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -76,7 +76,6 @@ const Uppersection = () => (
         </div>
       </div>
     </div>
-
   </section>
 )
 
@@ -103,7 +102,7 @@ const MiddleSection = () => (
 const Title = () => (
   <div className="relative">
     <div className="flex flex-col items-center gap-2">
-      <h1 className="text-8xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient bg-[length:200%_auto] hover:animate-none leading-tight">
+      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-gradient bg-[length:200%_auto] hover:animate-none leading-tight">
         Hi, I'm Martin
       </h1>
     </div>

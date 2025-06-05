@@ -17,7 +17,10 @@ import {
     SiApple,
     SiXcode,
     SiPython,
-    SiFastapi
+    SiFastapi,
+    SiWebassembly,
+    SiHtml5,
+    SiWebpack
 } from 'react-icons/si';
 
 interface TechIcon {
@@ -45,6 +48,9 @@ const techIcons: Record<string, TechIcon> = {
     xcode: { icon: <SiXcode size={20} />, color: '#1575F9' },
     python: { icon: <SiPython size={20} />, color: '#306998' },
     fastapi: { icon: <SiFastapi size={20} />, color: '#009688' },
+    webassembly: { icon: <SiWebassembly size={20} />, color: '#000000' },
+    html: { icon: <SiHtml5 size={20} />, color: '#E34F26' },
+    webpack: { icon: <SiWebpack size={20} />, color: '#8ED6FB' },
 };
 
 interface Project {
@@ -56,6 +62,13 @@ interface Project {
 }
 
 const projects: Project[] = [
+    {
+        title: "HTML5 Barcode/QR code scanner",
+        description: "A simple HTML5 barcode/QR code scanner based on zxing/wasm library. It uses the browser's camera to scan barcodes and QR codes. It also has a simple UI for scanning barcodes and QR codes.",
+        link: "https://qr-scanner-demo-xi.vercel.app/",
+        github: "https://github.com/epictroller64/qr-scanner",
+        tech: ["html", "javascript", "typescript", "webpack", "webassembly"]
+    },
     {
         title: "Company Statistics",
         description: "Shows Estonian company statistics including ownership, employees, revenue, and more. Data is fetched from multiple public datasets, such as OpenSanctions and Statistikaamet.",

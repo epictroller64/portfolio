@@ -124,7 +124,7 @@ const projects: Project[] = [
 
 export const ProjectsShowcase = () => {
     return (
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-4xl mx-auto" id="projects">
             <h2 className="text-4xl text-start text-foreground font-medium mb-8">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                 {projects.map((project, index) => (

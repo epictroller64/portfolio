@@ -2,7 +2,7 @@
 
 export default function AboutMe() {
     return (
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-4xl mx-auto" id="about-me">
             <h2 className="text-4xl text-start text-foreground font-medium mb-8">About Me</h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>

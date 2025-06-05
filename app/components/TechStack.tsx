@@ -114,7 +114,7 @@ const techStack: TechItem[] = [
 
 export const TechStack = () => {
     return (
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-4xl mx-auto" id="tech-stack">
             <h2 className="text-4xl text-start text-foreground font-medium mb-8">Tech Stack</h2>
             <p className="text-lg text-foreground font-medium mb-8">Technologies I have worked with.</p>
             <div className="w-full">
